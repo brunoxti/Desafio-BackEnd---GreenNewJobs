@@ -11,7 +11,7 @@
 
 Abra o terminal ou prompt de comando e digite os seguintes comandos:
 
-<code>git clone https://github.com/seu-usuario/GreenNewJobs.git</code>
+<code>git clone [https://github.com/seu-usuario/GreenNewJobs.git](https://github.com/brunoxti/Desafio-BackEnd---GreenNewJobs.git)</code>
 
 <code>cd GreenNewJobs</code>
 
