@@ -1,0 +1,50 @@
+version: '3.4'
+
+services:
+  mongo:
+    image: mongo
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongo-data:/data/db
+    networks:
+      - app-network
+
+  rabbitmq:
+    image: rabbitmq:management
+    environment:
+      RABBITMQ_DEFAULT_USER: guest
+      RABBITMQ_DEFAULT_PASS: guest
+    ports:
+      - "5672:5672"
+      - "15672:15672"
+    networks:
+      - app-network
+
+  app:
+    build:
+      context: ./GreenNewJobs/GreenNewJobs
+      dockerfile: Dockerfile
+    ports:
+      - "8080:80"
+    depends_on:
+      - mongo
+      - rabbitmq
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - MONGODB_CONNECTION_STRING=mongodb://mongo:27017/GreenNewJobs
+      - RABBITMQ_HOST=rabbitmq
+      - RABBITMQ_USERNAME=guest
+      - RABBITMQ_PASSWORD=guest
+    volumes:
+      - dataprotection-keys:/root/.aspnet/DataProtection-Keys
+    networks:
+      - app-network
+
+volumes:
+  mongo-data:
+  dataprotection-keys:
+
+networks:
+  app-network:
+    driver: bridge

@@ -1,0 +1,173 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\dev\\MotorRent\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{BDD0EFB0-A444-42CC-8E19-69AFF74B03BA}|MotorRent\\MotorRent.csproj|c:\\dev\\motorrent\\motorrent\\motorrent.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{BDD0EFB0-A444-42CC-8E19-69AFF74B03BA}|MotorRent\\MotorRent.csproj|solutionrelative:motorrent\\motorrent.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BDD0EFB0-A444-42CC-8E19-69AFF74B03BA}|MotorRent\\MotorRent.csproj|c:\\dev\\motorrent\\motorrent\\infrastructure\\context\\mongodbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BDD0EFB0-A444-42CC-8E19-69AFF74B03BA}|MotorRent\\MotorRent.csproj|solutionrelative:motorrent\\infrastructure\\context\\mongodbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BDD0EFB0-A444-42CC-8E19-69AFF74B03BA}|MotorRent\\MotorRent.csproj|c:\\dev\\motorrent\\motorrent\\api\\controllers\\motorcyclescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BDD0EFB0-A444-42CC-8E19-69AFF74B03BA}|MotorRent\\MotorRent.csproj|solutionrelative:motorrent\\api\\controllers\\motorcyclescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BDD0EFB0-A444-42CC-8E19-69AFF74B03BA}|MotorRent\\MotorRent.csproj|c:\\dev\\motorrent\\motorrent\\api\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BDD0EFB0-A444-42CC-8E19-69AFF74B03BA}|MotorRent\\MotorRent.csproj|solutionrelative:motorrent\\api\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BDD0EFB0-A444-42CC-8E19-69AFF74B03BA}|MotorRent\\MotorRent.csproj|c:\\dev\\motorrent\\motorrent\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{BDD0EFB0-A444-42CC-8E19-69AFF74B03BA}|MotorRent\\MotorRent.csproj|solutionrelative:motorrent\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BDD0EFB0-A444-42CC-8E19-69AFF74B03BA}|MotorRent\\MotorRent.csproj|c:\\dev\\motorrent\\motorrent\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BDD0EFB0-A444-42CC-8E19-69AFF74B03BA}|MotorRent\\MotorRent.csproj|solutionrelative:motorrent\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BDD0EFB0-A444-42CC-8E19-69AFF74B03BA}|MotorRent\\MotorRent.csproj|c:\\dev\\motorrent\\motorrent\\infrastructure\\services\\tokenservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BDD0EFB0-A444-42CC-8E19-69AFF74B03BA}|MotorRent\\MotorRent.csproj|solutionrelative:motorrent\\infrastructure\\services\\tokenservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BDD0EFB0-A444-42CC-8E19-69AFF74B03BA}|MotorRent\\MotorRent.csproj|c:\\dev\\motorrent\\motorrent\\api\\controllers\\rentalscontroller .cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BDD0EFB0-A444-42CC-8E19-69AFF74B03BA}|MotorRent\\MotorRent.csproj|solutionrelative:motorrent\\api\\controllers\\rentalscontroller .cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BDD0EFB0-A444-42CC-8E19-69AFF74B03BA}|MotorRent\\MotorRent.csproj|c:\\dev\\motorrent\\motorrent\\api\\controllers\\driverscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BDD0EFB0-A444-42CC-8E19-69AFF74B03BA}|MotorRent\\MotorRent.csproj|solutionrelative:motorrent\\api\\controllers\\driverscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "MotorRent",
+              "DocumentMoniker": "C:\\dev\\MotorRent\\MotorRent\\MotorRent.csproj",
+              "RelativeDocumentMoniker": "MotorRent\\MotorRent.csproj",
+              "ToolTip": "C:\\dev\\MotorRent\\MotorRent\\MotorRent.csproj",
+              "RelativeToolTip": "MotorRent\\MotorRent.csproj",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAASAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2024-06-12T01:48:13.887Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "MongoDbContext.cs",
+              "DocumentMoniker": "C:\\dev\\MotorRent\\MotorRent\\Infrastructure\\Context\\MongoDbContext.cs",
+              "RelativeDocumentMoniker": "MotorRent\\Infrastructure\\Context\\MongoDbContext.cs",
+              "ToolTip": "C:\\dev\\MotorRent\\MotorRent\\Infrastructure\\Context\\MongoDbContext.cs",
+              "RelativeToolTip": "MotorRent\\Infrastructure\\Context\\MongoDbContext.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAAWAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-12T01:24:31.167Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\dev\\MotorRent\\MotorRent\\appsettings.json",
+              "RelativeDocumentMoniker": "MotorRent\\appsettings.json",
+              "ToolTip": "C:\\dev\\MotorRent\\MotorRent\\appsettings.json",
+              "RelativeToolTip": "MotorRent\\appsettings.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAAiAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-06-12T01:05:15.659Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\dev\\MotorRent\\MotorRent\\Program.cs",
+              "RelativeDocumentMoniker": "MotorRent\\Program.cs",
+              "ToolTip": "C:\\dev\\MotorRent\\MotorRent\\Program.cs",
+              "RelativeToolTip": "MotorRent\\Program.cs",
+              "ViewState": "AQIAAI8AAAAAAAAAAAAUwJ8AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-12T00:57:00.249Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "TokenService.cs",
+              "DocumentMoniker": "C:\\dev\\MotorRent\\MotorRent\\Infrastructure\\Services\\TokenService.cs",
+              "RelativeDocumentMoniker": "MotorRent\\Infrastructure\\Services\\TokenService.cs",
+              "ToolTip": "C:\\dev\\MotorRent\\MotorRent\\Infrastructure\\Services\\TokenService.cs",
+              "RelativeToolTip": "MotorRent\\Infrastructure\\Services\\TokenService.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABkAAAArAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-12T00:56:37.492Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "AuthController.cs",
+              "DocumentMoniker": "C:\\dev\\MotorRent\\MotorRent\\Api\\Controllers\\AuthController.cs",
+              "RelativeDocumentMoniker": "MotorRent\\Api\\Controllers\\AuthController.cs",
+              "ToolTip": "C:\\dev\\MotorRent\\MotorRent\\Api\\Controllers\\AuthController.cs",
+              "RelativeToolTip": "MotorRent\\Api\\Controllers\\AuthController.cs",
+              "ViewState": "AQIAABAAAAAAAAAAAAAgwB4AAAA8AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-12T00:56:04.935Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "MotorcyclesController.cs",
+              "DocumentMoniker": "C:\\dev\\MotorRent\\MotorRent\\Api\\Controllers\\MotorcyclesController.cs",
+              "RelativeDocumentMoniker": "MotorRent\\Api\\Controllers\\MotorcyclesController.cs",
+              "ToolTip": "C:\\dev\\MotorRent\\MotorRent\\Api\\Controllers\\MotorcyclesController.cs",
+              "RelativeToolTip": "MotorRent\\Api\\Controllers\\MotorcyclesController.cs",
+              "ViewState": "AQIAAEAAAAAAAAAAAAAUwFwAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-12T00:08:46.746Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "RentalsController .cs",
+              "DocumentMoniker": "C:\\dev\\MotorRent\\MotorRent\\Api\\Controllers\\RentalsController .cs",
+              "RelativeDocumentMoniker": "MotorRent\\Api\\Controllers\\RentalsController .cs",
+              "ToolTip": "C:\\dev\\MotorRent\\MotorRent\\Api\\Controllers\\RentalsController .cs",
+              "RelativeToolTip": "MotorRent\\Api\\Controllers\\RentalsController .cs",
+              "ViewState": "AQIAADIAAAAAAAAAAAAIwAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-12T00:08:42.963Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "DriversController.cs",
+              "DocumentMoniker": "C:\\dev\\MotorRent\\MotorRent\\Api\\Controllers\\DriversController.cs",
+              "RelativeDocumentMoniker": "MotorRent\\Api\\Controllers\\DriversController.cs",
+              "ToolTip": "C:\\dev\\MotorRent\\MotorRent\\Api\\Controllers\\DriversController.cs",
+              "RelativeToolTip": "MotorRent\\Api\\Controllers\\DriversController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-12T00:08:35.203Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

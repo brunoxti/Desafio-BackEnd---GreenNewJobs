@@ -1,0 +1,836 @@
+{
+	"info": {
+		"_postman_id": "eee11c37-1b22-4622-984e-9ed2ef006f57",
+		"name": "GreenNewJobs",
+		"description": "# 🚀 Get started here\n\nThis template guides you through CRUD operations (GET, POST, PUT, DELETE), variables, and tests.\n\n## 🔖 **How to use this template**\n\n#### **Step 1: Send requests**\n\nRESTful APIs allow you to perform CRUD operations using the POST, GET, PUT, and DELETE HTTP methods.\n\nThis collection contains each of these [request](https://learning.postman.com/docs/sending-requests/requests/) types. Open each request and click \"Send\" to see what happens.\n\n#### **Step 2: View responses**\n\nObserve the response tab for status code (200 OK), response time, and size.\n\n#### **Step 3: Send new Body data**\n\nUpdate or add new data in \"Body\" in the POST request. Typically, Body data is also used in PUT request.\n\n```\n{\n    \"name\": \"Add your name in the body\"\n}\n\n ```\n\n#### **Step 4: Update the variable**\n\nVariables enable you to store and reuse values in Postman. We have created a [variable](https://learning.postman.com/docs/sending-requests/variables/) called `base_url` with the sample request [https://postman-api-learner.glitch.me](https://postman-api-learner.glitch.me). Replace it with your API endpoint to customize this collection.\n\n#### **Step 5: Add tests in the \"Scripts\" tab**\n\nAdding tests to your requests can help you confirm that your API is working as expected. You can write test scripts in JavaScript and view the output in the \"Test Results\" tab.\n\n<img src=\"https://content.pstmn.io/fa30ea0a-373d-4545-a668-e7b283cca343/aW1hZ2UucG5n\" alt=\"\" height=\"1530\" width=\"2162\">\n\n## 💪 Pro tips\n\n- Use folders to group related requests and organize the collection.\n    \n- Add more [scripts](https://learning.postman.com/docs/writing-scripts/intro-to-scripts/) to verify if the API works as expected and execute workflows.\n    \n\n## 💡Related templates\n\n[API testing basics](https://go.postman.co/redirect/workspace?type=personal&collectionTemplateId=e9a37a28-055b-49cd-8c7e-97494a21eb54&sourceTemplateId=ddb19591-3097-41cf-82af-c84273e56719)  \n[API documentation](https://go.postman.co/redirect/workspace?type=personal&collectionTemplateId=e9c28f47-1253-44af-a2f3-20dce4da1f18&sourceTemplateId=ddb19591-3097-41cf-82af-c84273e56719)  \n[Authorization methods](https://go.postman.co/redirect/workspace?type=personal&collectionTemplateId=31a9a6ed-4cdf-4ced-984c-d12c9aec1c27&sourceTemplateId=ddb19591-3097-41cf-82af-c84273e56719)",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "21448220"
+	},
+	"item": [
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "Auth",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"// Script para salvar o token em uma variável de ambiente\r",
+									"pm.test(\"Save token\", function () {\r",
+									"    var response = pm.response.json();\r",
+									"    var token = response.token;\r",
+									"    pm.environment.set(\"authToken\", token);\r",
+									"});\r",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\": \"admin\",\r\n    \"password\": \"password\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/auth/login",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "DeliveryPersons",
+			"item": [
+				{
+					"name": "Add Delivery Persons",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "accept",
+								"value": "*/*"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"name\": \"Junior2\",\n  \"cnpj\": \"38g4h174468\",\n  \"birthDate\": \"2010-06-17T19:31:03.345Z\",\n  \"cnhNumber\": \"546467g89\",\n  \"cnhType\": \"C\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/DeliveryPersons",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"DeliveryPersons"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add CNH",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "accept",
+								"value": "*/*"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "ContentType",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "ContentDisposition",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "Headers",
+									"value": "{\n  \"additionalProp1\": [\n    \"string\"\n  ],\n  \"additionalProp2\": [\n    \"string\"\n  ],\n  \"additionalProp3\": [\n    \"string\"\n  ]\n}",
+									"type": "text"
+								},
+								{
+									"key": "Length",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "Name",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "FileName",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "cnhImage",
+									"type": "file",
+									"src": "postman-cloud:///1ef2e65e-e1ed-4f70-b7f7-0a13da1f1037"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{base_url}}/DeliveryPersons/f26514b7-b4bd-433d-9a38-06c12fc18a9e/upload-cnh",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"DeliveryPersons",
+								"f26514b7-b4bd-433d-9a38-06c12fc18a9e",
+								"upload-cnh"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Delivery Persons",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "accept",
+								"value": "text/plain"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/DeliveryPersons",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"DeliveryPersons"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "GreenMotorcycle",
+			"item": [
+				{
+					"name": "Get All Motorcycle",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "https://localhost:7080/api/motorgreen",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7080",
+							"path": [
+								"api",
+								"motorgreen"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Motorcycle By Plate",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/MotorcycleGreen/filter?plate=SDE3322",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"MotorcycleGreen",
+								"filter"
+							],
+							"query": [
+								{
+									"key": "plate",
+									"value": "SDE3322"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add Motorcycle",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"year\": 2019,\r\n  \"model\": \"CG\",\r\n  \"plate\": \"JGD3322\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/motorcyclegreen",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"motorcyclegreen"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Motorcycle",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "accept",
+								"value": "*/*"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \n  \"model\": \"CG\",\n  \"year\": 2021,\n  \"plate\": \"JH?F1010\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/MotorcycleGreen/04cb7f14-277f-4495-9836-134cd47d07e0",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"MotorcycleGreen",
+								"04cb7f14-277f-4495-9836-134cd47d07e0"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Motorcycle",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/MotorcycleGreen/04cb7f14-277f-4495-9836-134cd47d07e0",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"MotorcycleGreen",
+								"04cb7f14-277f-4495-9836-134cd47d07e0"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Orders",
+			"item": [
+				{
+					"name": "POST Orders",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "accept",
+								"value": "*/*"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"creationDate\": \"2024-06-21T21:03:10.908Z\",\n  \"value\": 45\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/Orders",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"Orders"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Orders",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "accept",
+								"value": "*/*"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/Orders",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"Orders"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Orders By Id",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "accept",
+								"value": "*/*"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/Orders/bea88a80-f50a-4ef3-8599-a7aec7bd67a7",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"Orders",
+								"bea88a80-f50a-4ef3-8599-a7aec7bd67a7"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Order",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "accept",
+								"value": "*/*"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"id\": \"bea88a80-f50a-4ef3-8599-a7aec7bd67a7\",\n  \"creationDate\": \"2024-06-18T21:05:17.407Z\",\n  \"value\": 66,\n  \"status\": 0\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/Orders/bea88a80-f50a-4ef3-8599-a7aec7bd67a7",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"Orders",
+								"bea88a80-f50a-4ef3-8599-a7aec7bd67a7"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Accept Order",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "accept",
+								"value": "*/*"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"orderId\": \"6409be44-7d35-4e8e-9143-20cd76d52a4d\",\n  \"deliveryPersonId\": \"f26514b7-b4bd-433d-9a38-06c12fc18a9e\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/Orders/accept",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"Orders",
+								"accept"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Deliver Order",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "accept",
+								"value": "*/*"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"orderId\": \"6409be44-7d35-4e8e-9143-20cd76d52a4d\",\n  \"deliveryPersonId\": \"f26514b7-b4bd-433d-9a38-06c12fc18a9e\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/Orders/deliver",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"Orders",
+								"deliver"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Notified Drivers",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "accept",
+								"value": "*/*"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/Orders/notified-drivers/8e1e3b57-9bfb-41a7-94aa-52c1b65d2c66",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"Orders",
+								"notified-drivers",
+								"8e1e3b57-9bfb-41a7-94aa-52c1b65d2c66"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Rentals",
+			"item": [
+				{
+					"name": "Add Rental",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "accept",
+								"value": "*/*"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"deliveryPersonId\": \"f26514b7-b4bd-433d-9a38-06c12fc18a9e\",\n  \"motorcycleGreenId\": \"91595c9f-ead4-467a-915e-ef6c7e8586b3\",\n  \"planId\": \"0a97b40d-88f8-46ed-90c9-8cdf7ef24c71\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/Rentals",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"Rentals"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Rentals",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "accept",
+								"value": "*/*"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/Rentals",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"Rentals"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Rentals By Id",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "accept",
+								"value": "*/*"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/Rentals/e075cc93-81e6-4bac-a2af-1ddf7c6ee4d6",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"Rentals",
+								"e075cc93-81e6-4bac-a2af-1ddf7c6ee4d6"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Rentals",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "accept",
+								"value": "*/*"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"id\": \"3fa85f64-5717-4562-b3fc-2c963f66afa6\",\n  \"endDate\": \"2024-06-18T21:10:37.634Z\",\n  \"expectedEndDate\": \"2024-06-18T21:10:37.635Z\",\n  \"cost\": 0\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/Rentals/e075cc93-81e6-4bac-a2af-1ddf7c6ee4d6",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"Rentals",
+								"e075cc93-81e6-4bac-a2af-1ddf7c6ee4d6"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Return Rental",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "accept",
+								"value": "*/*"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"rentalId\": \"804193bf-766d-4ab1-bcc2-89ce3f1cd44f\",\n  \"endDate\": \"2024-07-25T19:06:21.490Z\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/Rentals/return/804193bf-766d-4ab1-bcc2-89ce3f1cd44f",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"Rentals",
+								"return",
+								"804193bf-766d-4ab1-bcc2-89ce3f1cd44f"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Rental Plans",
+			"item": [
+				{
+					"name": "Get Plans",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "accept",
+								"value": "*/*"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/RentalPlans",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"RentalPlans"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add New Plan",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "accept",
+								"value": "*/*"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"name\": \"string\",\n  \"durationDays\": 0,\n  \"costPerDay\": 0\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/RentalPlans",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"RentalPlans"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "{{authToken}}",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "id",
+			"value": "1"
+		},
+		{
+			"key": "base_url",
+			"value": "http://localhost:8080/api"
+		}
+	]
+}
